@@ -490,7 +490,7 @@ export function GlobeDemo() {
           }}
           className="div"
         >
-          <h2 className="text-center text-xl md:text-7xl font-bold text-black dark:text-white">
+          <h2 className="text-center text-7xl md:text-7xl font-bold text-black dark:text-white">
             CV ANDITA
           </h2>
           <p className="text-center text-base md:text-lg font-normal text-neutral-700 dark:text-neutral-200 max-w-xl mt-2 mx-auto">
