@@ -41,7 +41,7 @@ export function NavbarDemo() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div className="fixed top-0 right-0 w-full z-50">
+    <div className="relative w-full z-50">
       <Navbar>
         {/* Desktop Navigation */}
         <NavBody>
@@ -82,7 +82,7 @@ export function NavbarDemo() {
   );
 }
 
-const World = dynamic(() => import("./components/ui/globe").then((m) => m.World), {
+const World = dynamic(() => import("../app/components/ui/globe").then((m) => m.World), {
   ssr: false,
 });
 
@@ -474,7 +474,7 @@ export function GlobeDemo() {
   ];
  
   return (
-    <div className="flex flex-row items-center justify-center py-20 md:h-auto dark:bg-blue-900 bg-white relative w-full">
+    <div className="flex flex-row items-center justify-center md:h-auto dark:bg-blue-900 bg-white relative w-full">
       <div className="mx-auto w-full relative overflow-hidden h-screen">
         <motion.div
           initial={{
@@ -488,17 +488,17 @@ export function GlobeDemo() {
           transition={{
             duration: 1,
           }}
-          className="div"
+          className="absolute translate-y-120 lg:translate-y-80 z-1 w-full"
         >
-          <h2 className="text-center text-7xl md:text-7xl font-bold text-black dark:text-white">
+          <h2 className="justify-self-center text-center text-6xl md:text-7xl font-bold text-black dark:text-white max-w-[calc(100vw-2rem)]">
             CV ANDITA
           </h2>
-          <p className="text-center text-base md:text-lg font-normal text-neutral-700 dark:text-neutral-200 max-w-xl mt-2 mx-auto">
+          <p className="justify-self-center text-center text-base md:text-lg font-normal text-neutral-700 dark:text-neutral-200 mt-4 max-w-[calc(100vw-2rem)]">
             Perusahaan  Penyedia Maintenace dan Pemasangan Jaringan Internet
           </p>
         </motion.div>
-        <div className="absolute w-full bottom-0 inset-x-0 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
-        <div className="absolute w-screen h-full md:h-full z-10">
+        <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
+        <div className="absolute w-full translate-y-[calc(var(--spacing)*20)] h-96 md:h-full">
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
       </div>
@@ -510,6 +510,7 @@ export default function Home() {
   return (
     <>
       <NavbarDemo />
+      <GlobeDemo />
       <GlobeDemo />
     </>
   );
