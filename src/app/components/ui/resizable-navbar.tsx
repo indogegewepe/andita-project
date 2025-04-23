@@ -1,5 +1,6 @@
 "use client";
 import { cn } from "@/../lib/utils";
+import Image from 'next/image'
 import { IconMenu2, IconX } from "@tabler/icons-react";
 import {
   motion,
@@ -119,7 +120,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
     <motion.div
       onMouseLeave={() => setHovered(null)}
       className={cn(
-        "absolute inset-0 hidden flex-1 flex-row items-center justify-end space-x-2 text-sm font-medium text-zinc-600 transition duration-200 hover:text-zinc-800 lg:flex lg:space-x-2",
+        "absolute inset-0 hidden flex-1 flex-row items-center justify-end space-x-2 font-medium text-zinc-600 transition duration-200 hover:text-zinc-800 lg:flex lg:space-x-2 text-xl",
         className,
       )}
     >
@@ -234,13 +235,13 @@ export const NavbarLogo = () => {
       href="#"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
     >
-      <img
-        src="https://assets.aceternity.com/logo-dark.png"
+      <Image
+        src="/assets/img/LogoNew.png"
         alt="logo"
         width={30}
         height={30}
       />
-      <span className="font-medium text-white dark:text-blue-900">ANDITA</span>
+      <span className="text-2xl items-center antialiased font-medium text-white dark:text-blue-900">ANDITA</span>
     </a>
   );
 };

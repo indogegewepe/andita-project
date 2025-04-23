@@ -13,8 +13,9 @@ import { useState } from "react";
 import React from "react";
 import { motion } from "motion/react";
 import dynamic from "next/dynamic";
+import Image from 'next/image'
 
-export function NavbarDemo() {
+export function NavbarFixed() {
   const navItems = [
     {
       name: "About Us",
@@ -86,7 +87,7 @@ const World = dynamic(() => import("../app/components/ui/globe").then((m) => m.W
   ssr: false,
 });
 
-export function GlobeDemo() {
+export function Globe() {
   const globeConfig = {
     pointSize: 4,
     globeColor: "#062056",
@@ -474,7 +475,7 @@ export function GlobeDemo() {
   ];
  
   return (
-    <div className="flex flex-row items-center justify-center md:h-auto dark:bg-blue-900 bg-white relative w-full">
+    <div id="home" className="flex flex-row items-center justify-center md:h-auto dark:bg-blue-900 bg-white relative w-full">
       <div className="mx-auto w-full relative overflow-hidden h-screen">
         <motion.div
           initial={{
@@ -490,14 +491,14 @@ export function GlobeDemo() {
           }}
           className="absolute translate-y-120 lg:translate-y-80 z-1 w-full"
         >
-          <h2 className="justify-self-center text-center text-6xl md:text-7xl font-bold text-black dark:text-white max-w-[calc(100vw-2rem)]">
+          <h2 className="m-auto text-center text-6xl md:text-7xl font-bold text-black dark:text-white max-w-[calc(100vw-2rem)] drop-shadow-[0_0_5px_white]">
             CV ANDITA
           </h2>
-          <p className="justify-self-center text-center text-base md:text-lg font-normal text-neutral-700 dark:text-neutral-200 mt-4 max-w-[calc(100vw-2rem)]">
-            Perusahaan  Penyedia Maintenace dan Pemasangan Jaringan Internet
+          <p className="m-auto text-center text-base md:text-lg font-normal text-neutral-700 dark:text-neutral-200 mt-4 max-w-[calc(100vw-2rem)] drop-shadow-[0_0_5px_white]">
+            Perusahaan Penyedia Maintenace dan Pemasangan Jaringan Internet
           </p>
         </motion.div>
-        <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
+        <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-blue-950 to-white z-40" />
         <div className="absolute w-full translate-y-[calc(var(--spacing)*20)] h-96 md:h-full">
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
@@ -506,12 +507,45 @@ export function GlobeDemo() {
   );
 }
 
+export function About() {
+  return(
+    <div id="about" className=" flex flex-col items-center justify-center w-full h-screen bg-white dark:bg-blue-950">
+        <div className="h-full flex max-w-6xl mx-auto flex-col md:flex-row items-center px-4 justify-center">
+            <div className="flex flex-col justify-center px-4 kami">
+              <div className="shadow-[0px_0px_50px_10px_#f7fafc] size-64 lg:size-80 bg-stone-100 rounded-full flex justify-center items-center relative overflow-hidden">
+                <Image 
+                  src="/assets/img/LogoNama.png"
+                  alt="logo"
+                  width={230} // atau sesuai ukuran aslinya
+                  height={230}
+                  className="object-contain"
+                />
+              </div>
+
+            </div>
+
+            <div className="text-center justify-between flex flex-col items-center md:items-end h-64 lg:h-80 px-4">
+                <h2 className="w-fit text-white border-b-4 border-white text-4xl md:text-5xl font-bold drop-shadow-lg my-4">
+                    Tentang Kami
+                </h2>
+                <p className="text-white text-base md:text-xl md:text-end">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. 
+                </p>
+                <button className="w-32 h-10 rounded-full flex justify-center items-center m-4 shadow-[inset_0_0_0_2px_#1c398e] bg-transparent hover:bg-[#1c398e] hover:text-white dark:text-neutral-200 transition duration-200">
+                    Read More
+                </button>
+            </div>
+        </div>
+    </div>
+  )
+}
+
 export default function Home() {
   return (
     <>
-      <NavbarDemo />
-      <GlobeDemo />
-      <GlobeDemo />
+      <NavbarFixed />
+      <Globe />
+      <About />
     </>
   );
 }
