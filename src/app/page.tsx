@@ -15,8 +15,8 @@ import { motion } from "motion/react";
 import dynamic from "next/dynamic";
 import Image from 'next/image'
 import { TextGenerateEffect } from "./components/ui/text-generate-effect";
-
 import Footer from "./components/ui/footer";
+import Head from 'next/head';
 
 const HeroPage = `Perusahaan Penyedia Maintenace dan Pemasangan Jaringan Internet`;
 
