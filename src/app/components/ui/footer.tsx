@@ -46,11 +46,13 @@ const Footer = () => {
             &copy; 2025 ANDITA. All rights reserved.
           </p>
           <div className="flex space-x-4 mt-4">
-            <a href="#" className="text-white hover:text-gray-300">
+            <a href="#" className="text-white hover:text-gray-300" title="Instagram">
               <i className="fa-brands fa-instagram"></i>
+              <span className="sr-only">Instagram</span>
             </a>
-            <a href="#" className="text-white hover:text-gray-300">
+            <a href="#" className="text-white hover:text-gray-300" title="Email">
               <i className="fa-solid fa-envelope"></i>
+              <span className="sr-only">Email</span>
             </a>
           </div>
         </div>
