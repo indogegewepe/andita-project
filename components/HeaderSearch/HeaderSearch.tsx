@@ -1,8 +1,8 @@
 'use client';
 
+import { useState } from 'react';
 import { IconSearch, IconMoon, IconSun, IconSettings } from '@tabler/icons-react';
 import { 
-  Autocomplete, 
   Burger, 
   Group, 
   Button, 
@@ -10,109 +10,36 @@ import {
   Box,
   Drawer,
   ScrollArea,
-  Text,
-  ThemeIcon,
-  UnstyledButton,
-  useMantineTheme, } from '@mantine/core';
+  Input, 
+  CloseButton
+} from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import classes from './HeaderSearch.module.css';
-import { MantineLogo } from '@mantinex/mantine-logo';
-
-const mockdata = [
-  {
-    title: 'Open source',
-    description: 'This Pokémon’s cry is very loud and distracting',
-  },
-  {
-    title: 'Free for everyone',
-    description: 'The fluid of Smeargle’s tail secretions changes',
-  },
-  {
-    title: 'Documentation',
-    description: 'Yanma is capable of seeing 360 degrees without',
-  },
-  {
-    title: 'Security',
-    description: 'The shell’s rounded shape and the grooves on its.',
-  },
-  {
-    title: 'Analytics',
-    description: 'This Pokémon uses its flying ability to quickly chase',
-  },
-  {
-    title: 'Notifications',
-    description: 'Combusken battles with the intensely hot flames it spews',
-  },
-];
 
 export function HeaderMegaMenu() {
-  const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
-  const theme = useMantineTheme();
-
-  const links = mockdata.map((item) => (
-    <UnstyledButton className={classes.subLink} key={item.title}>
-      <Group wrap="nowrap" align="flex-start">
-        <div>
-          <Text size="sm" fw={500}>
-            {item.title}
-          </Text>
-          <Text size="xs" c="dimmed">
-            {item.description}
-          </Text>
-        </div>
-      </Group>
-    </UnstyledButton>
-  ));
-
   return (
-    <Box pb={120}>
+    <Box visibleFrom='sm'>
       <header className={classes.header}>
-        <Group justify="space-between" h="100%">
-
+        <Group justify="center" h="100%">
           <Group h="100%" gap={0} visibleFrom="sm">
             <a href="#" className={classes.link}>
-              Home
+              About Us
             </a>
             <a href="#" className={classes.link}>
-              Features
+              Berita
             </a>
             <a href="#" className={classes.link}>
-              Learn
+              Gallery
             </a>
             <a href="#" className={classes.link}>
-              Academy
+              Services
+            </a>
+            <a href="#" className={classes.link}>
+              Contact Us
             </a>
           </Group>
-
-          <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
         </Group>
       </header>
-
-      <Drawer
-        opened={drawerOpened}
-        onClose={closeDrawer}
-        size="100%"
-        padding="md"
-        title="Navigation"
-        hiddenFrom="sm"
-        zIndex={1000000}
-      >
-        <ScrollArea h="calc(100vh - 80px" mx="-md">
-
-          <a href="#" className={classes.link}>
-            Home
-          </a>
-          <a href="#" className={classes.link}>
-            Features
-          </a>
-          <a href="#" className={classes.link}>
-            Learn
-          </a>
-          <a href="#" className={classes.link}>
-            Academy
-          </a>
-        </ScrollArea>
-      </Drawer>
     </Box>
   );
 }
@@ -149,27 +76,78 @@ export function ColorSchemeToggle() {
 }
 
 export function HeaderSearch() {
-  const [drawerOpened, { toggle: toggleDrawer}] = useDisclosure(false);
-  
+  const [value, setValue] = useState('');
+  const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
   return (
     <header className={classes.header}>
       <div className={classes.inner}>
-        <Group>
-          <Burger opened={drawerOpened} onClick={toggleDrawer} size="sm" hiddenFrom="sm" />
-          <MantineLogo size={28} />
-        </Group>
-
+        <img src='./assets/img/logo-andita.png' alt="Andita logo" height={50} />
         <Group>
           <ColorSchemeToggle />
-          <Autocomplete
-            className={classes.search}
+          <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
+          <Input
             placeholder="Search"
+            value={value}
             leftSection={<IconSearch size={16} stroke={1.5} />}
-            data={['React', 'Angular', 'Vue', 'Next.js', 'Riot.js', 'Svelte', 'Blitz.js']}
-            visibleFrom="xs"
+            onChange={(event) => setValue(event.currentTarget.value)}
+            rightSectionPointerEvents="all"
+            rightSection={
+              <CloseButton
+                aria-label="Clear input"
+                onClick={() => setValue('')}
+                style={{ display: value ? undefined : 'none' }}
+              />
+            }
+            visibleFrom='sm'
           />
+          <Drawer
+            opened={drawerOpened}
+            onClose={closeDrawer}
+            size="100%"
+            padding="md"
+            title="Menu"
+            hiddenFrom="sm"
+            zIndex={1000000}
+          >
+            <ScrollArea h="calc(100vh - 80px" mx="-md">
+              <Input
+                placeholder="Search"
+                value={value}
+                leftSection={<IconSearch size={16} stroke={1.5} />}
+                onChange={(event) => setValue(event.currentTarget.value)}
+                rightSectionPointerEvents="all"
+                rightSection={
+                  <CloseButton
+                    aria-label="Clear input"
+                    onClick={() => setValue('')}
+                    style={{ display: value ? undefined : 'none' }}
+                  />
+                }
+                m={10}
+              />
+              <a href="#" className={classes.link}>
+                About Us
+              </a>
+              <a href="#" className={classes.link}>
+                Berita
+              </a>
+              <a href="#" className={classes.link}>
+                Gallery
+              </a>
+              <a href="#" className={classes.link}>
+                Services
+              </a>
+              <a href="#" className={classes.link}>
+                Contact Us
+              </a>
+            </ScrollArea>
+          </Drawer>
         </Group>
       </div>
     </header>
   );
+}
+
+function usestate(arg0: string): [any] {
+  throw new Error('Function not implemented.');
 }
