@@ -1,18 +1,18 @@
 .root {
-  background-color: #000000;
+  background-color: var(--mantine-color-body);
   height: 100vh;
+  padding-top: 120px;
+  overflow: hidden;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.background {
+  background-color: #13235B;
+  clip-path: polygon(0 89%, 12% 89%, 16% 99%, 100% 99%, 100% 0, 15% 0, 11% 9%, 0 9%);
   height: 100%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url('/assets/img/background.png');
   width: 100%;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid var(--mantine-color-white);
 
   @media (max-width: $mantine-breakpoint-md) {
     padding-left: calc(var(--mantine-spacing-md) * 2);
@@ -23,22 +23,50 @@
   }
 }
 
-.inner {
-  display: flex;
-  justify-content: space-between;
-  
-
-  @media (max-width: $mantine-breakpoint-md) {
-    flex-direction: column;
-  }
+.globeWrapper {
+  position: absolute;
+  left: 30%;
+  height: 160%;
+  width: 100%;
 }
 
-.content {
-  padding-top: calc(var(--mantine-spacing-xl) * 2);
-  padding-bottom: calc(var(--mantine-spacing-xl) * 2);
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
 
-  @media (max-width: $mantine-breakpoint-md) {
-    margin-right: 0;
+.inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    align-self: center;
+    height: 100%;
+}
+
+.textContent {
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 70%;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .textContent,
+  .globeWrapper {
+    max-width: 100%;
   }
 }
 
@@ -47,11 +75,10 @@
   font-family: Outfit, var(--mantine-font-family);
   font-weight: 500;
   line-height: 1.05;
-  max-width: 500px;
   font-size: 48px;
+  z-index: 2;
 
   @media (max-width: $mantine-breakpoint-md) {
-    max-width: 100%;
     font-size: 34px;
     line-height: 1.15;
   }
@@ -60,20 +87,53 @@
 .description {
   color: var(--mantine-color-white);
   opacity: 0.75;
-  max-width: 500px;
+}
+
+.header{
+  padding-right: 80px;
+  font-family: Outfit, var(--mantine-font-family);
+  font-size: 22px;
+  clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
+  position: absolute;
+  top: 113px;
+  z-index: 1;
+  border-top: 3px solid var(--mantine-color-white);
+  border-left: 3px solid var(--mantine-color-white);
 
   @media (max-width: $mantine-breakpoint-md) {
-    max-width: 100%;
+    width: 100%;
   }
 }
 
 .control {
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-right: 75px;
   font-family: Outfit, var(--mantine-font-family);
   font-size: 22px;
+  clip-path: polygon(0 0, 70% 0, 100% 127%, 0% 100%);
+  position: absolute;
+  bottom: 5px;
+  border-bottom: 3px solid var(--mantine-color-white);
+  border-left: 3px solid var(--mantine-color-white);
+  z-index: 1;
 
   @media (max-width: $mantine-breakpoint-md) {
     width: 100%;
+  }
+}
+
+.button {
+  background-color: #000326;
+  color: var(--mantine-color-white);
+  font-family: Outfit, var(--mantine-font-family);
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #000753
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .background {
+    background-color: #000326;
   }
 }

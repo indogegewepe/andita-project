@@ -1,5 +1,5 @@
 "use client";
-import { Button, Container, Text, Title } from '@mantine/core';
+import { Button, Text, Title } from '@mantine/core';
 import classes from './HeroImageRight.module.css';
 
 import React from "react";
@@ -404,32 +404,31 @@ export function Globe() {
 export function HeroImageRight() {
   return (
     <div className={classes.root}>
-      <Container size="lg" className={classes.container}>
-        <div className={classes.inner}>
-          <div className={classes.content}>
-            <Title className={classes.title}>
-              A fully featured 
-              React components library
-            </Title>
-
-            <Text className={classes.description} mt={30}>
-              Build fully functional accessible web applications with ease – Mantine includes more
-              than 100 customizable components and hooks to cover you in any situation
-            </Text>
-
-            <Button
-              variant="gradient"
-              gradient={{ from: 'pink', to: 'yellow' }}
-              size="xl"
-              className={classes.control}
-              mt={40}
-            >
-              Get started
-            </Button>
-          </div>
+      
+      <div className={classes.background}>
+        <div className={classes.globeWrapper}>
           <Globe />
         </div>
-      </Container>
+        <div className={classes.container}>
+          <div className={classes.inner}>
+            <div className={classes.textContent}>
+              <Title className={classes.title}>Selamat Datang!,</Title>
+              <Title className={classes.title}>
+                Penuhi kebutuhan jaringanmu dengan Kecepatan yang lebih Stabil
+              </Title>
+              <Text className={classes.description} mt={30}>
+                CV Andita adalah Perusahaan Penyedia Maintenance dan Pemasangan Jaringan Internet bla bla
+              </Text>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Button size="xl" variant="default" className={`${classes.header} ${classes.button}`}>
+          Home Page
+      </Button>
+      <Button size="xl" variant="default" className={`${classes.control} ${classes.button}`}>
+          Tentang Kami
+      </Button>
     </div>
   );
 }

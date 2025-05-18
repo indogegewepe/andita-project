@@ -46,6 +46,7 @@ export function HeaderMegaMenu() {
 
 export function ColorSchemeToggle() {
   const { colorScheme, setColorScheme } = useMantineColorScheme();
+  
   const modes = ['light', 'dark', 'auto'] as const;
   const currentIndex = modes.indexOf(colorScheme as typeof modes[number]);
   const nextMode = modes[(currentIndex + 1) % modes.length];
@@ -146,8 +147,4 @@ export function HeaderSearch() {
       </div>
     </header>
   );
-}
-
-function usestate(arg0: string): [any] {
-  throw new Error('Function not implemented.');
 }
