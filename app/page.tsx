@@ -1,14 +1,26 @@
-import { HeaderSearch, HeaderMegaMenu } from '@/components/HeaderSearch/HeaderSearch';
-import { HeroImageRight } from '@/components/HeroImageRight/HeroImageRight';
+import { Header } from '../components/Header/Header';
+import { Container } from '@mantine/core';
+import { Globe } from '../components/Globe/Globe';
+import css from './css/styles.module.css';
 
 export default function HomePage() {
   return (
     <>
-      <nav style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000 }}>
-        <HeaderSearch />
-        <HeaderMegaMenu />
-      </nav>
-      <HeroImageRight />
+      <Header />
+      <section className={css.heroSection}>
+        <Container size="lg" className={css.heroContainer}>
+          <h1>Fast, Secure Internet & Reliable Cloud Solutions</h1>
+          <p>Empowering homes and businesses with high-speed connectivity, advanced Wi-Fi, and robust server infrastructure—engineered for performance and security.</p>
+          <div className={css.heroButtons}>
+            <a href="/services" className="btn btn-primary">Explore Services</a>
+            <a href="/contact" className="btn btn-secondary">Contact Us</a>
+          </div>
+        </Container>
+
+        <div className={css.heroImage}>
+          <Globe />
+        </div>
+      </section>
     </>
   );
 }
