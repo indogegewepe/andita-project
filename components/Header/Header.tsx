@@ -40,7 +40,7 @@ export function Header() {
 
   return (
     <header className={classes.header}>
-      <Container size="xl" className={classes.inner}>
+      <Container size="lg" className={classes.inner}>
         <Image src={LogoAndita} alt="Andita Logo" height={46} />
         <Group gap={5} visibleFrom="sm">
           <ActionToggle />

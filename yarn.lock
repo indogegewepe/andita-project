@@ -1258,6 +1258,11 @@
   resolved "https://registry.npmjs.org/@floating-ui/utils/-/utils-0.2.9.tgz"
   integrity sha512-MDWhGtE+eHw5JW7lq4qhc5yRLS11ERl1c7Z6Xd0a58DozHES6EnNNwUWbMiG4J9Cgj053Bhk8zvlhFYKVhULwg==
 
+"@fontsource/inter@^5.2.6":
+  version "5.2.6"
+  resolved "https://registry.npmjs.org/@fontsource/inter/-/inter-5.2.6.tgz"
+  integrity sha512-CZs9S1CrjD0jPwsNy9W6j0BhsmRSQrgwlTNkgQXTsAeDRM42LBRLo3eo9gCzfH4GvV7zpyf78Ozfl773826csw==
+
 "@humanfs/core@^0.19.1":
   version "0.19.1"
   resolved "https://registry.npmjs.org/@humanfs/core/-/core-0.19.1.tgz"
@@ -6668,6 +6673,7 @@ makeerror@1.0.12:
   version "1.0.0"
   resolved "file:"
   dependencies:
+    "@fontsource/inter" "^5.2.6"
     "@mantine/core" "8.0.0"
     "@mantine/hooks" "8.0.0"
     "@mantinex/mantine-logo" "^2.0.0"
