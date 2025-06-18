@@ -31,7 +31,7 @@
     "clsx": "^2.1.1",
     "mantine-next-template": "file:",
     "motion": "^12.18.1",
-    "next": "15.2.3",
+    "next": "^15.3.4",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "tailwind-merge": "^3.3.1",

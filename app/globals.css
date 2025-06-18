@@ -1,5 +1,6 @@
-html, body {
+body {
   overflow-x: hidden;
+  background-color: light-dark(#fff, #121212);
 }
 
 .heroContainer{
@@ -8,7 +9,11 @@ html, body {
     justify-content: space-between;
     position: relative;
     overflow: hidden;
-    height: 86vh;
+    height: 100vh;
+    @media screen and (max-width: 900px) {
+        align-items: flex-start;
+        padding-top: 5rem;
+    }
 }
 
 .heroContent {
@@ -22,9 +27,14 @@ html, body {
 }
 
 h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    color: light-dark(var(--mantine-color-blue-7), var(--mantine-color-blue-4));
+    font-size: 3.5rem;
+    font-weight: 450;
+    color: light-dark(#007BFF, #007BFF);
+    text-shadow: #171717 -1px 2px 2px;
+    @media screen and (max-width: 900px) {
+        font-size: 2.5rem;
+        text-shadow: #171717 -1px 2px 2px;
+    }
 }
 
 div p{
@@ -32,7 +42,7 @@ div p{
     backdrop-filter: blur(5px);
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 p {
@@ -50,7 +60,10 @@ p {
 }
 
 .heroButtons a{
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 0px 30px;
 }
 
 .heroGlobe {
@@ -60,6 +73,9 @@ p {
     z-index: -1;
     top: 0;
     transform: translateX(270px) translateY(50px);
+    @media screen and (max-width: 900px) {
+        transform: translate(0px, 282px);
+    }
 }
 
 @media (max-width: 900px) {
@@ -76,5 +92,29 @@ p {
     }
     .heroButtons {
         justify-content: center;
+    }
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+.heroContainerSec{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    place-items: center;
+    overflow: hidden;
+    height: 100vh;
+    @media screen and (max-width: 900px) {
+        align-items: flex-start;
+        padding-top: 5rem;
     }
 }
