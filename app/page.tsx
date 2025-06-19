@@ -1,7 +1,9 @@
 import { Header } from '../components/Header/Header';
-import { Container, Button, Grid } from '@mantine/core';
+import { Container, Button, Title } from '@mantine/core';
 import { Globe } from '../components/Globe/Globe';
 import { IconAddressBook } from '@tabler/icons-react';
+import { GridServices } from '../components/GridServices/grid-services';
+import { Project } from '../components/OurProject/project';
 
 export default function HomePage() {
   return (
@@ -22,18 +24,26 @@ export default function HomePage() {
       <div className="heroGlobe">
         <Globe />
       </div>
-      <Container size="lg" className="heroContainerSec">
-        <div className="heroContentSec">
-          <h1>Our Services</h1>
-          <div>
-            <Grid>
-              <Grid.Col span={{ base: 12, md: 6, lg: 3 }}>1</Grid.Col>
-              <Grid.Col span={{ base: 12, md: 6, lg: 3 }}>2</Grid.Col>
-              <Grid.Col span={{ base: 12, md: 6, lg: 3 }}>3</Grid.Col>
-              <Grid.Col span={{ base: 12, md: 6, lg: 3 }}>4</Grid.Col>
-            </Grid>
+      <Container fluid bg="#171717" className='rounded-md'>
+        <Container size="lg" className="heroContainerSec, p-4">
+          <div className="heroContentSec">
+            <Title>Our Services</Title>
+            <div>
+              <GridServices />
+            </div>
           </div>
-        </div>
+        </Container>
+      </Container>
+
+      <Container fluid>
+        <Container size="lg" className="heroContainerThird, p-4">
+          <div className="heroContentSec">
+            <Title>Our Projects</Title>
+            <div>
+              <Project />
+            </div>
+          </div>
+        </Container>
       </Container>
     </>
   );

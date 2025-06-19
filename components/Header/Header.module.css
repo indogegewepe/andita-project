@@ -1,6 +1,7 @@
 .header {
   height: 56px;
-  background-color: var(--mantine-color-white);
+  background-color: #ffffff;
+  backdrop-filter: blur(5px);
   border-bottom: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
@@ -44,7 +45,8 @@
   height: 100vh;
   position: fixed;
   width: 100%;
-  z-index: 1000;
+  top : 0;
+  z-index: -1;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   justify-content: center;
   align-items: center;

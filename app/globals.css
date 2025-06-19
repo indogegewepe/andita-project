@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 body {
   overflow-x: hidden;
   background-color: light-dark(#fff, #121212);
@@ -26,7 +28,7 @@ body {
     }
 }
 
-h1 {
+.heroContainer h1 {
     font-size: 3.5rem;
     font-weight: 450;
     color: light-dark(#007BFF, #007BFF);
@@ -35,14 +37,6 @@ h1 {
         font-size: 2.5rem;
         text-shadow: #171717 -1px 2px 2px;
     }
-}
-
-div p{
-    background-color: light-dark(rgba(255, 255, 255, 0.477), rgba(154, 154, 154, 0.477));
-    backdrop-filter: blur(5px);
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 p {
@@ -72,10 +66,10 @@ p {
     width: 100%;
     z-index: -1;
     top: 0;
-    transform: translateX(270px) translateY(50px);
+    transform: translateX(448px) translateY(-59px);
     @media screen and (max-width: 900px) {
-        transform: translate(0px, 282px);
-    }
+        transform: translate(0px, 331px);
+}
 }
 
 @media (max-width: 900px) {
@@ -116,5 +110,16 @@ p {
     @media screen and (max-width: 900px) {
         align-items: flex-start;
         padding-top: 5rem;
+    }
+}
+
+.heroContentSec h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 500;
+    padding: 2rem 0;
+    color: #fff;
+    @media screen and (max-width: 900px) {
+        font-size: 1.5rem;
     }
 }

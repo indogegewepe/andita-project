@@ -43,13 +43,13 @@ export function Header() {
       <Container size="lg" className={classes.inner}>
         <Image src={LogoAndita} alt="Andita Logo" height={46} />
         <Group gap={5} visibleFrom="sm">
-          <ActionToggle />
           {items}
+          <ActionToggle />
         </Group>
 
         <Group hiddenFrom="sm" gap={5}>
-          <ActionToggle />
           <Burger opened={opened} onClick={toggle} className={classes.burger} />
+          <ActionToggle />
         </Group>
       </Container>
 
