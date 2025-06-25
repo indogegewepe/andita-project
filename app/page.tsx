@@ -28,22 +28,20 @@ export default function HomePage() {
         <Container size="lg" className="heroContainerSec, p-4">
           <div className="heroContentSec">
             <Title>Our Services</Title>
-            <div>
+            <div className="pb-6">
               <GridServices />
             </div>
           </div>
         </Container>
       </Container>
 
-      <Container fluid>
-        <Container size="lg" className="heroContainerThird, p-4">
-          <div className="heroContentSec">
-            <Title>Our Projects</Title>
-            <div>
-              <Project />
-            </div>
+      <Container size="lg" className="heroContainerThird p-6">
+        <div className="heroContentThird">
+          <Title>Our Projects</Title>
+          <div>
+            <Project />
           </div>
-        </Container>
+        </div>
       </Container>
     </>
   );
