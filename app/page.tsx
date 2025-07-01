@@ -4,6 +4,8 @@ import { Globe } from '../components/Globe/Globe';
 import { IconAddressBook } from '@tabler/icons-react';
 import { GridServices } from '../components/GridServices/grid-services';
 import { Project } from '../components/OurProject/project';
+import { Partners } from '@/components/Partners/Partners';
+import { Faq } from '@/components/FAQ/faq';
 
 export default function HomePage() {
   return (
@@ -24,6 +26,7 @@ export default function HomePage() {
       <div className="heroGlobe">
         <Globe />
       </div>
+
       <Container fluid bg="#171717" className='rounded-md'>
         <Container size="lg" className="heroContainerSec, p-4">
           <div className="heroContentSec">
@@ -41,6 +44,17 @@ export default function HomePage() {
           <div>
             <Project />
           </div>
+        </div>
+      </Container>
+
+      <Container fluid className="HeroPartners p-6 rounded-md" style={{ backgroundColor: '#171717' }}>
+          <Partners />
+      </Container>
+
+      <Container size="lg" className="heroContainerFourth p-6">
+        <Title>Frequently Asked Questions</Title>
+        <div className="faqContent">
+          <Faq />
         </div>
       </Container>
     </>
