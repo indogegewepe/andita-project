@@ -6,6 +6,8 @@ import { GridServices } from '../components/GridServices/grid-services';
 import { Project } from '../components/OurProject/project';
 import { Partners } from '@/components/Partners/Partners';
 import { Faq } from '@/components/FAQ/faq';
+import { ContactUs } from '@/components/Contact/ContactUs';
+import { Footer } from '@/components/Footer/Footer';
 
 export default function HomePage() {
   return (
@@ -13,7 +15,7 @@ export default function HomePage() {
       <nav className="header">
         <Header />
       </nav>
-      <Container size="lg" className="heroContainer">
+      <Container size="lg" className="heroContainer" id='home'>
         <div className="heroContent">
           <h1>Fast, Secure Internet & Reliable Cloud Solutions</h1>
           <p>Empowering homes and businesses with high-speed connectivity, advanced Wi-Fi, and robust server infrastructure—engineered for performance and security.</p>
@@ -27,36 +29,45 @@ export default function HomePage() {
         <Globe />
       </div>
 
-      <Container fluid bg="#171717" className='rounded-md'>
-        <Container size="lg" className="heroContainerSec, p-4">
+      <Container fluid bg="#171717" className='rounded-md scroll-mt-12' id='services'>
+        <Container size="lg" className="heroContainerSec">
           <div className="heroContentSec">
-            <Title>Our Services</Title>
-            <div className="pb-6">
-              <GridServices />
-            </div>
+            <Title className='text-center'>Our Services</Title>
+            <GridServices />
           </div>
         </Container>
       </Container>
 
-      <Container size="lg" className="heroContainerThird p-6">
+      <Container size="lg" className="heroContainerThird pb-16 scroll-mt-12" id='projects'>
         <div className="heroContentThird">
-          <Title>Our Projects</Title>
+          <Title className='text-center'>Our Projects</Title>
           <div>
             <Project />
           </div>
         </div>
       </Container>
 
-      <Container fluid className="HeroPartners p-6 rounded-md" style={{ backgroundColor: '#171717' }}>
+      <Container fluid className="HeroPartners pb-6 rounded-md scroll-mt-12" style={{ backgroundColor: '#171717' }} id='partners'>
+        <div className="heroContentPartners">
+          <Title className='text-center text-white p-6'>Our Partners</Title>
           <Partners />
+        </div>
       </Container>
 
-      <Container size="lg" className="heroContainerFourth p-6">
-        <Title>Frequently Asked Questions</Title>
+      <Container size="lg" className="heroContainerFourth scroll-mt-24" id='faq'>
         <div className="faqContent">
+          <Title className="text-center">Frequently Asked Questions</Title>
           <Faq />
         </div>
       </Container>
+
+      <Container size="lg" className="heroContainerFifth scroll-mt-18" id='contact'>
+        <div className="heroContentFifth">
+          <ContactUs />
+        </div>
+      </Container>
+
+      <Footer />
     </>
   );
 }
