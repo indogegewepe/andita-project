@@ -26,10 +26,10 @@ function ContactIcon({ icon: Icon, title, description, ...others }: ContactIconP
 }
 
 const MOCKDATA = [
-  { title: 'Email', description: 'hello@mantine.dev', icon: IconAt },
-  { title: 'Phone', description: '+49 (800) 335 35 35', icon: IconPhone },
-  { title: 'Address', description: '844 Morris Park avenue', icon: IconMapPin },
-  { title: 'Working hours', description: '8 a.m. – 11 p.m.', icon: IconSun },
+  { title: 'Email', description: 'anditacom@gmail.com', icon: IconAt },
+  { title: 'Phone', description: '+62 817-4127-621', icon: IconPhone },
+  { title: 'Address', description: 'Jl.Lembu Andini No.1', icon: IconMapPin },
+  { title: 'Working hours', description: '9 a.m. – 5 p.m.', icon: IconSun },
 ];
 
 export function ContactIconsList() {

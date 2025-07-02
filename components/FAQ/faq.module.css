@@ -3,6 +3,10 @@
   padding-bottom: calc(var(--mantine-spacing-xl) * 2);
 }
 
+.wrapper img{
+  filter: drop-shadow(11px 15px 0px black);
+}
+
 .title {
   margin-bottom: var(--mantine-spacing-md);
   padding-left: var(--mantine-spacing-md);

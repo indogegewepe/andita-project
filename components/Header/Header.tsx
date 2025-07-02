@@ -72,7 +72,7 @@ export function Header() {
   return (
     <header className={classes.header}>
       <Container size="lg" className={classes.inner}>
-        <Image src={LogoAndita} alt="Andita Logo" height={46} />
+        <Image src={LogoAndita} alt="Andita Logo" height={46} style={{ filter: "brightness(1.5)" }}/>
         <Group gap={5} visibleFrom="sm">
           {items}
           <ActionToggle />

@@ -1,6 +1,6 @@
 "use client";
 
-import { IconBrandInstagram, IconBrandTwitter, IconBrandYoutube, IconBrandLinkedin } from '@tabler/icons-react';
+import { IconBrandInstagram, IconBrandYoutube, IconBrandLinkedin } from '@tabler/icons-react';
 import { Container, Text, Image, TextInput, Button } from '@mantine/core';
 import classes from './Footer.module.css';
 import { useState } from 'react';
@@ -18,19 +18,11 @@ const data = [
     ],
   },
   {
-    title: 'Newsletter',
-    links: [],
-  },
-  {
     title: 'Follow us',
     class: "flex flex-row gap-2",
     links: [
       {
         label: <IconBrandInstagram size={18} stroke={1.5} />,
-        link: '#',
-      },
-      {
-        label: <IconBrandTwitter size={18} stroke={1.5} />,
         link: '#',
       },
       {
@@ -43,6 +35,10 @@ const data = [
       },
     ],
   },
+  {
+    title: 'Newsletter',
+    links: [],
+  },
 ];
 
 function NewsletterForm() {
@@ -53,7 +49,7 @@ function NewsletterForm() {
         e.preventDefault();
         // handle subscribe logic here
       }}
-      style={{ display: 'flex', gap: 8, marginTop: 8 }}
+      style={{ display: 'flex', gap: 8 }}
     >
       <TextInput
         placeholder="Your email"
@@ -72,7 +68,7 @@ function NewsletterForm() {
 }
 
 // Replace Newsletter group rendering in Footer
-data[1].links = [
+data[2].links = [
   {
     label: <NewsletterForm />,
     link: '#',
@@ -114,7 +110,7 @@ export function Footer() {
     <footer className={classes.footer}>
       <Container size="lg" className={classes.inner}>
         <div className={classes.logo}>
-          <Image src="/assets/img/logo-andita.png" alt="Logo Andita" width={100} height={50} />
+          <Image src="/assets/img/logo-andita.png" alt="Logo Andita" className={classes.img} width={100} height={50} />
           <Text size="xs" c="dimmed" className={classes.description}>
             High-speed internet, Wi-Fi, and cloud hosting for the digital era.
           </Text>

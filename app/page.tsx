@@ -56,7 +56,7 @@ export default function HomePage() {
 
       <Container size="lg" className="heroContainerThird pb-16 scroll-mt-12" id='projects'>
         <div className="heroContentThird">
-          <Title className='text-center'>Our Projects</Title>
+          <Title className='text-center'>Latest Projects</Title>
           <div>
             <Project />
           </div>
@@ -77,7 +77,7 @@ export default function HomePage() {
         </div>
       </Container>
 
-      <Container size="lg" className="heroContainerFifth scroll-mt-18" id='contact'>
+      <Container fluid className="heroContainerFifth scroll-mt-18" id='contact'>
         <div className="heroContentFifth">
           <ContactUs />
         </div>
