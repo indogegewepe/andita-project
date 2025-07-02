@@ -31,8 +31,8 @@ export function Header() {
         }
       },
       {
-        rootMargin: '0px 0px -50% 0px', // Trigger when halfway in viewport
-        threshold: 0.5,
+        rootMargin: '0px 0px -80% 0px', // Elemen dianggap terlihat jika bagian atasnya menyentuh 40% viewport dari atas
+        threshold: 0.1, // Hanya perlu 10% elemen terlihat
       }
     );
 
@@ -57,7 +57,7 @@ export function Header() {
       data-active={active === link.link || undefined}
       onClick={(event) => {
         event.preventDefault();
-        toggle(); // if you're closing a mobile menu
+        toggle();
 
         const target = document.querySelector(link.link);
         if (target) {

@@ -38,7 +38,7 @@ body {
     }
 }
 
-p {
+.heroContent p {
     color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
 }
 
@@ -114,7 +114,6 @@ p {
 .heroContentSec {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
 }
 
 .heroContentSec h1 {
@@ -122,6 +121,7 @@ p {
     font-size: 2.5rem;
     font-weight: 500;
     color: #fff;
+    padding-bottom: 2.5rem;
     @media screen and (max-width: 900px) {
         font-size: 1.5rem;
     }
@@ -201,4 +201,11 @@ p {
     @media screen and (max-width: 900px) {
         font-size: 1.5rem;
     }
+}
+
+.Whatsapp{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    backdrop-filter: blur(10px);
 }

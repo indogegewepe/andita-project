@@ -1,6 +1,6 @@
 .header {
   height: 56px;
-  background-color: #ffffff;
+  background-color: light-dark(#fff, #171717);
   backdrop-filter: blur(5px);
   border-bottom: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
@@ -19,7 +19,7 @@
   padding: 7px 12px;
   border-radius: var(--mantine-radius-sm);
   text-decoration: none;
-  color: var(--mantine-color-black);
+  color: light-dark(#171717, #fff);
   font-size: var(--mantine-font-size-sm);
   font-weight: 500;
 
@@ -33,8 +33,8 @@
 }
 
 .link:hover {
-    background-color: light-dark(var(--mantine-color-gray-4), #76b8ff);
-    color: light-dark(#007BFF, var(--mantine-color-white));
+    background-color: light-dark(var(--mantine-color-gray-2), #76b8ff);
+    color: light-dark(#007BFF, var(--mantine-color-black));
   }
 
 .link[data-active='true'] {
@@ -47,7 +47,7 @@
   display: flex;
   flex-direction: column;
   padding: 10px;
-  background-color: light-dark(#fff, #121212);
+  background-color: light-dark(#fff, #171717);
   height: 100vh;
   position: fixed;
   width: 100%;
@@ -78,8 +78,4 @@
   .dropdown {
     display: none;
   }
-}
-
-.burger {
-  --burger-color: var(--mantine-color-black);
 }

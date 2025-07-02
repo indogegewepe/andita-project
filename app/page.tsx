@@ -1,3 +1,5 @@
+"use client";
+
 import { Header } from '../components/Header/Header';
 import { Container, Button, Title } from '@mantine/core';
 import { Globe } from '../components/Globe/Globe';
@@ -8,6 +10,7 @@ import { Partners } from '@/components/Partners/Partners';
 import { Faq } from '@/components/FAQ/faq';
 import { ContactUs } from '@/components/Contact/ContactUs';
 import { Footer } from '@/components/Footer/Footer';
+import { WhatsappButton } from '@/components/Whatsapp/whatsapp'
 
 export default function HomePage() {
   return (
@@ -21,7 +24,20 @@ export default function HomePage() {
           <p>Empowering homes and businesses with high-speed connectivity, advanced Wi-Fi, and robust server infrastructure—engineered for performance and security.</p>
           <div className="heroButtons">
             <Button component="a" href="/services" variant="filled" color="#007BFF">About Us</Button>
-            <Button component="a" href="/contact" variant="outline" color="#007BFF" rightSection={<IconAddressBook size={14} />} style={{ backdropFilter: 'blur(5px)' }}>Contact Us</Button>
+            <Button
+              component="a"
+              href="#contact"
+              variant="outline"
+              color="#007BFF"
+              rightSection={<IconAddressBook size={14} />}
+              style={{ backdropFilter: 'blur(5px)' }}
+              onClick={e => {
+              e.preventDefault();
+              document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              Contact Us
+            </Button>
           </div>
         </div>
       </Container>
@@ -29,9 +45,9 @@ export default function HomePage() {
         <Globe />
       </div>
 
-      <Container fluid bg="#171717" className='rounded-md scroll-mt-12' id='services'>
+      <Container fluid bg="#171717" className='rounded-md'>
         <Container size="lg" className="heroContainerSec">
-          <div className="heroContentSec">
+          <div id="services" className="heroContentSec py-24 scroll-mt-6">
             <Title className='text-center'>Our Services</Title>
             <GridServices />
           </div>
@@ -54,8 +70,8 @@ export default function HomePage() {
         </div>
       </Container>
 
-      <Container size="lg" className="heroContainerFourth scroll-mt-24" id='faq'>
-        <div className="faqContent">
+      <Container size="lg" className="heroContainerFourth">
+        <div className="faqContent scroll-mt-24" id='faq'>
           <Title className="text-center">Frequently Asked Questions</Title>
           <Faq />
         </div>
@@ -68,6 +84,7 @@ export default function HomePage() {
       </Container>
 
       <Footer />
+      <WhatsappButton />
     </>
   );
 }

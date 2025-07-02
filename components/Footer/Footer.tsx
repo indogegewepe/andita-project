@@ -112,7 +112,7 @@ export function Footer() {
 
   return (
     <footer className={classes.footer}>
-      <Container className={classes.inner}>
+      <Container size="lg" className={classes.inner}>
         <div className={classes.logo}>
           <Image src="/assets/img/logo-andita.png" alt="Logo Andita" width={100} height={50} />
           <Text size="xs" c="dimmed" className={classes.description}>
@@ -121,7 +121,7 @@ export function Footer() {
         </div>
         <div className={classes.groups}>{groups}</div>
       </Container>
-      <Container className={classes.afterFooter}>
+      <Container size="lg" className={classes.afterFooter}>
         <Text c="dimmed" size="sm" className="text-center">
           © 2025 CV Andita. All rights reserved.
         </Text>
