@@ -7,7 +7,7 @@ import { ContainerTextFlip } from "@/components/ui/container-text-flip";
 function WhatsappText() {
 return (
     <ContainerTextFlip
-        words={["Contact Us", "Follow for more", "Welcome!"]}
+        words={["Contact Us", "Subscribe for more", "Welcome!", "WhatsApp"]}
     />
 );
 }

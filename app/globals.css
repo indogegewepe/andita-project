@@ -32,10 +32,6 @@ body {
     font-size: 2.5rem;
     font-weight: 450;
     color: light-dark(#007BFF, #007BFF);
-    @media screen and (max-width: 900px) {
-        font-size: 2.5rem;
-        text-shadow: #171717 -1px 2px 2px;
-    }
 }
 
 .heroContent p {
@@ -122,9 +118,6 @@ body {
     font-weight: 500;
     color: #fff;
     padding-bottom: 2.5rem;
-    @media screen and (max-width: 900px) {
-        font-size: 1.5rem;
-    }
 }
 
 .heroContentThird h1 {
@@ -133,9 +126,6 @@ body {
     font-weight: 500;
     padding: 1.5rem 0;
     color: light-dark(#000000, #ffffff);
-    @media screen and (max-width: 900px) {
-        font-size: 1.5rem;
-    }
 }
 
 .heroPartners {
@@ -168,9 +158,6 @@ body {
     font-weight: 500;
     padding: 1.5rem 0;
     color: #fff;
-    @media screen and (max-width: 900px) {
-        font-size: 1.5rem;
-    }
 }
 
 .heroContainerFourth {
@@ -198,9 +185,6 @@ body {
     font-weight: 500;
     padding: 1.5rem 0;
     color: light-dark(#000000, #ffffff);
-    @media screen and (max-width: 900px) {
-        font-size: 1.5rem;
-    }
 }
 
 .Whatsapp{

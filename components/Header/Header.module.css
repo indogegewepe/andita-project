@@ -1,7 +1,6 @@
 .header {
   height: 56px;
   background-color: light-dark(#fff, #171717);
-  backdrop-filter: blur(5px);
   border-bottom: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
