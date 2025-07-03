@@ -4,6 +4,7 @@ import './globals.css';
 import React from 'react';
 import { ColorSchemeScript, mantineHtmlProps, MantineProvider } from '@mantine/core';
 import { theme } from '../theme';
+
 export const metadata = {
   title: 'Andita',
   description: 'Butuh Jaringan Berkualitas jangan lupa hubungi CV. Andita',

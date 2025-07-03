@@ -1,9 +1,8 @@
-"use client";
+'use client';
 
-import React, { useState, useEffect, useId } from "react";
-
-import { motion } from "motion/react";
-import { cn } from "@/lib/utils";
+import React, { useEffect, useId, useState } from 'react';
+import { motion } from 'motion/react';
+import { cn } from '@/lib/utils';
 
 export interface ContainerTextFlipProps {
   /** Array of words to cycle through in the animation */
@@ -64,22 +63,22 @@ export function ContainerTextFlip({
       <motion.div
         transition={{
           duration: animationDuration / 1000,
-          ease: "easeInOut",
+          ease: 'easeInOut',
         }}
         ref={textRef}
         layoutId={`word-div-${words[currentWordIndex]}-${id}`}
       >
         <motion.div>
-          {words[currentWordIndex].split("").map((letter, index) => (
+          {words[currentWordIndex].split('').map((letter, index) => (
             <motion.span
               key={index}
               initial={{
                 opacity: 0,
-                filter: "blur(10px)",
+                filter: 'blur(10px)',
               }}
               animate={{
                 opacity: 1,
-                filter: "blur(0px)",
+                filter: 'blur(0px)',
               }}
               transition={{
                 delay: index * 0.02,

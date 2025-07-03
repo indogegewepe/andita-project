@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import { Burger, Container, Group } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { ActionToggle } from '@/components/ToggleTheme/ActionToggle';
 import LogoAndita from '@/public/assets/img/logo-andita.png';
-import Image from 'next/image';
 import classes from './Header.module.css';
 
 const links = [
@@ -14,7 +14,7 @@ const links = [
   { link: '#projects', label: 'Projects' },
   { link: '#partners', label: 'Partners' },
   { link: '#faq', label: 'FAQ' },
-  { link: '#contact', label: 'Contact Us'}
+  { link: '#contact', label: 'Contact Us' },
 ];
 
 export function Header() {
@@ -72,7 +72,12 @@ export function Header() {
   return (
     <header className={classes.header}>
       <Container size="lg" className={classes.inner}>
-        <Image src={LogoAndita} alt="Andita Logo" height={46} style={{ filter: "brightness(1.5)" }}/>
+        <Image
+          src={LogoAndita}
+          alt="Andita Logo"
+          height={46}
+          style={{ filter: 'brightness(1.5)' }}
+        />
         <Group gap={5} visibleFrom="sm">
           {items}
           <ActionToggle />
@@ -84,11 +89,7 @@ export function Header() {
         </Group>
       </Container>
 
-      {opened && (
-        <div className={classes.dropdown}>
-          {items}
-        </div>
-      )}
+      {opened && <div className={classes.dropdown}>{items}</div>}
     </header>
   );
 }

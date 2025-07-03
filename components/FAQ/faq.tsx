@@ -1,11 +1,14 @@
-"use client";
+'use client';
 
 import { Accordion, Container, Grid } from '@mantine/core';
 import classes from './faq.module.css';
 
-const placeholder = 'Ya, kami menawarkan layanan instalasi di berbagai lokasi. Silakan hubungi kami untuk informasi lebih lanjut.';
-const placeholder2 = 'Biasanya, proses instalasi dapat memakan waktu mulai dari beberapa jam hingga beberapa hari, tergantung pada tingkat kerumitan dan kebutuhan spesifik lokasi Anda.';
-const placeholder3 = 'Ya, kami menyediakan layanan maintenance untuk instalasi kami. Tim kami siap membantu jika ada masalah yang muncul setelah instalasi.';
+const placeholder =
+  'Ya, kami menawarkan layanan instalasi di berbagai lokasi. Silakan hubungi kami untuk informasi lebih lanjut.';
+const placeholder2 =
+  'Biasanya, proses instalasi dapat memakan waktu mulai dari beberapa jam hingga beberapa hari, tergantung pada tingkat kerumitan dan kebutuhan spesifik lokasi Anda.';
+const placeholder3 =
+  'Ya, kami menyediakan layanan maintenance untuk instalasi kami. Tim kami siap membantu jika ada masalah yang muncul setelah instalasi.';
 
 export function Faq() {
   return (
@@ -18,11 +21,15 @@ export function Faq() {
           <Grid.Col span={{ base: 12, md: 6 }}>
             <Accordion chevronPosition="right" defaultValue="reset-password" variant="separated">
               <Accordion.Item className={classes.item} value="reset-password">
-                <Accordion.Control>Apakah jasa instalasi bisa dilakukan di luar kota?</Accordion.Control>
+                <Accordion.Control>
+                  Apakah jasa instalasi bisa dilakukan di luar kota?
+                </Accordion.Control>
                 <Accordion.Panel>{placeholder}</Accordion.Panel>
               </Accordion.Item>
               <Accordion.Item className={classes.item} value="another-account">
-                <Accordion.Control>Berapa lama proses instalasi jaringan fiber optic?</Accordion.Control>
+                <Accordion.Control>
+                  Berapa lama proses instalasi jaringan fiber optic?
+                </Accordion.Control>
                 <Accordion.Panel>{placeholder2}</Accordion.Panel>
               </Accordion.Item>
               <Accordion.Item className={classes.item} value="newsletter">

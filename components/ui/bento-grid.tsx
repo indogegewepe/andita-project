@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils';
 
 export const BentoGrid = ({
   className,
@@ -10,8 +10,8 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        "mx-auto grid max-w-7xl grid-cols-1 gap-4 md:auto-rows-[18rem] md:grid-cols-3",
-        className,
+        'mx-auto grid max-w-7xl grid-cols-1 gap-4 md:auto-rows-[18rem] md:grid-cols-3',
+        className
       )}
     >
       {children}
@@ -33,21 +33,18 @@ export const BentoGridItem = ({
   icon?: React.ReactNode;
 }) => {
   return (
-    <a href="#"
+    <a
+      href="#"
       className={cn(
-        "grid-bg group/bento shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-xl border border-neutral-200 p-4 transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:shadow-none",
-        className,
+        'grid-bg group/bento shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-xl border border-neutral-200 p-4 transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:shadow-none',
+        className
       )}
     >
       {header}
       <div className="transition duration-200 group-hover/bento:translate-x-2">
         {icon}
-        <div className="mt-2 mb-2 font-sans font-bold text-neutral-100 ">
-          {title}
-        </div>
-        <div className="font-sans text-xs font-normal text-neutral-100 ">
-          {description}
-        </div>
+        <div className="mt-2 mb-2 font-sans font-bold text-neutral-100 ">{title}</div>
+        <div className="font-sans text-xs font-normal text-neutral-100 ">{description}</div>
       </div>
     </a>
   );

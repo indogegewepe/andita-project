@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { IconBrandInstagram, IconBrandYoutube, IconBrandLinkedin } from '@tabler/icons-react';
-import { Container, Text, Image, TextInput, Button } from '@mantine/core';
-import classes from './Footer.module.css';
 import { useState } from 'react';
+import { IconBrandInstagram, IconBrandLinkedin, IconBrandYoutube } from '@tabler/icons-react';
+import { Button, Container, Image, Text, TextInput } from '@mantine/core';
+import classes from './Footer.module.css';
 
 const data = [
   {
@@ -14,12 +14,12 @@ const data = [
       { link: '#projects', label: 'Projects' },
       { link: '#partners', label: 'Partners' },
       { link: '#faq', label: 'FAQ' },
-      { link: '#contact', label: 'Contact Us'}
+      { link: '#contact', label: 'Contact Us' },
     ],
   },
   {
     title: 'Follow us',
-    class: "flex flex-row gap-2",
+    class: 'flex flex-row gap-2',
     links: [
       {
         label: <IconBrandInstagram size={18} stroke={1.5} />,
@@ -99,9 +99,7 @@ export function Footer() {
     return (
       <div className={classes.wrapper} key={group.title}>
         <Text className={classes.title}>{group.title}</Text>
-        <div className={group.class ?? ''}>
-          {links}
-        </div>
+        <div className={group.class ?? ''}>{links}</div>
       </div>
     );
   });
@@ -110,7 +108,13 @@ export function Footer() {
     <footer className={classes.footer}>
       <Container size="lg" className={classes.inner}>
         <div className={classes.logo}>
-          <Image src="/assets/img/logo-andita.png" alt="Logo Andita" className={classes.img} width={100} height={50} />
+          <Image
+            src="/assets/img/logo-andita.png"
+            alt="Logo Andita"
+            className={classes.img}
+            width={100}
+            height={50}
+          />
           <Text size="xs" c="dimmed" className={classes.description}>
             High-speed internet, Wi-Fi, and cloud hosting for the digital era.
           </Text>
