@@ -77,10 +77,8 @@ export default function HomePage() {
         </div>
       </Container>
 
-      <Container fluid className="heroContainerFifth scroll-mt-18" id='contact'>
-        <div className="heroContentFifth">
-          <ContactUs />
-        </div>
+      <Container fluid className="heroContact pb-6 rounded-md scroll-mt-12" id='contact'>
+        <ContactUs />
       </Container>
 
       <Footer />
