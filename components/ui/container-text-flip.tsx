@@ -2,7 +2,6 @@
 
 import React, { useEffect, useId, useState } from 'react';
 import { motion } from 'motion/react';
-import { cn } from '@/lib/utils';
 
 export interface ContainerTextFlipProps {
   /** Array of words to cycle through in the animation */
@@ -20,8 +19,6 @@ export interface ContainerTextFlipProps {
 export function ContainerTextFlip({
   words = [],
   interval = 3000,
-  className,
-  textClassName,
   animationDuration = 700,
 }: ContainerTextFlipProps) {
   const id = useId();

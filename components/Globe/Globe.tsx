@@ -8,12 +8,14 @@ const World = dynamic(() => import('../ui/Globe').then((m) => m.World), {
 });
 
 export function Globe() {
+  // Tailwind CSS is for styling HTML elements, not JS config objects.
+  // To use Tailwind, wrap the <World /> component in a styled div:
   const globeConfig = {
     pointSize: 4,
     globeColor: '#062056',
     showAtmosphere: true,
-    atmosphereColor: '#FFFFFF',
-    atmosphereAltitude: 0.1,
+    atmosphereColor: '#FFF',
+    atmosphereAltitude: 0.2,
     emissive: '#062056',
     emissiveIntensity: 0.1,
     shininess: 0.9,

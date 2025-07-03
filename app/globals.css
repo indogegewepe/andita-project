@@ -195,7 +195,6 @@ body {
 .contactContent {
     align-items: center;       
     position: relative;
-    width: 100vw;
     overflow: hidden;
     height: auto;
     padding: 3rem 0;
@@ -213,4 +212,7 @@ body {
 
 .grid-bg{
     background-color: light-dark(#007BFF, #070a4f);
+    &:hover {
+        transform: scale(1.05);
+    }
 }

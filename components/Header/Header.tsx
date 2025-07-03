@@ -76,7 +76,7 @@ export function Header() {
           src={LogoAndita}
           alt="Andita Logo"
           height={46}
-          style={{ filter: 'brightness(1.5)' }}
+          style={{ filter: 'saturate(1.5) brightness(1.5)' }}
         />
         <Group gap={5} visibleFrom="sm">
           {items}

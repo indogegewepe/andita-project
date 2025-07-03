@@ -86,5 +86,5 @@
 
 .img{
   transform:translateX(-8px);
-  filter: brightness(1.5);
+  filter: saturate(1.5) brightness(1.5);
 }

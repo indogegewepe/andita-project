@@ -34,7 +34,7 @@ const items = [
     ),
     className: 'md:col-span-1',
     icon: (
-      <Badge variant="light" color="#ff9800" radius="sm">
+      <Badge variant="light" color="light-dark(#ff9800, #007bff)" radius="sm">
         02/07/2025
       </Badge>
     ),
@@ -53,7 +53,7 @@ const items = [
     ),
     className: 'md:col-span-1',
     icon: (
-      <Badge variant="light" color="#ff9800" radius="sm">
+      <Badge variant="light" color="light-dark(#ff9800, #007bff)" radius="sm">
         04/07/2024
       </Badge>
     ),
@@ -72,7 +72,7 @@ const items = [
     ),
     className: 'md:col-span-1',
     icon: (
-      <Badge variant="light" color="#ff9800" radius="sm">
+      <Badge variant="light" color="light-dark(#ff9800, #007bff)" radius="sm">
         01/01/2023
       </Badge>
     ),

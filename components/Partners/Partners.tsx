@@ -9,17 +9,17 @@ export function Partners() {
           <img
             src="/assets/img/krapyak-removebg-preview.png"
             alt="Pesantren Krapyak"
-            className="w-full h-42 object-contain md:grayscale hover:grayscale-0"
+            className="w-full h-40 object-contain md:grayscale hover:grayscale-0 transition-transform duration-300 ease-in-out hover:scale-135"
           />
           <img
             src="/assets/img/smait.png"
             alt="SMAIT"
-            className="w-full h-42 object-contain md:grayscale hover:grayscale-0"
+            className="w-full h-40 object-contain md:grayscale hover:grayscale-0 transition-transform duration-300 ease-in-out hover:scale-135"
           />
           <img
             src="/assets/img/ugm1.png"
             alt="UGM"
-            className="w-full h-42 object-contain md:grayscale hover:grayscale-0"
+            className="w-full h-40 object-contain md:grayscale hover:grayscale-0 transition-transform duration-300 ease-in-out hover:scale-135"
           />
         </div>
       </div>
